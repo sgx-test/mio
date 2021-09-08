@@ -1,6 +1,6 @@
 use std::num::NonZeroU8;
 use std::{fmt, ops};
-
+use std::prelude::v1::*;
 /// Interest used in registering.
 ///
 /// Interest are used in [registering] [`event::Source`]s with [`Poll`], they

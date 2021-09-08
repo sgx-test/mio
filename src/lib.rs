@@ -1,6 +1,5 @@
 #![doc(html_root_url = "https://docs.rs/mio/0.7.0")]
 #![deny(
-    missing_docs,
     missing_debug_implementations,
     rust_2018_idioms,
     unused_imports,
@@ -56,6 +55,14 @@
     not(feature = "extra-docs"),
     doc = "`features` (only available when the `extra-docs` feature is enabled)."
 )]
+#![no_std]
+#![cfg_attr(all(feature = "mesalock_sgx", not(target_env = "sgx")), no_std)]
+#![cfg_attr(all(target_env = "sgx", target_vendor = "mesalock"), feature(rustc_private))]
+
+#[cfg(all(feature = "mesalock_sgx", not(target_env = "sgx")))]
+#[macro_use]
+extern crate sgx_tstd as std;
+use std::prelude::v1::*;
 
 // macros used internally
 #[macro_use]

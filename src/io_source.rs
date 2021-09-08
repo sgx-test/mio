@@ -6,7 +6,7 @@ use std::os::windows::io::AsRawSocket;
 #[cfg(debug_assertions)]
 use std::sync::atomic::{AtomicUsize, Ordering};
 use std::{fmt, io};
-
+use std::prelude::v1::*;
 #[cfg(any(unix, debug_assertions))]
 use crate::poll;
 use crate::sys::IoSourceState;

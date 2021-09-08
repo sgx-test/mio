@@ -1,7 +1,7 @@
 use crate::{poll, sys, Registry, Token};
 
 use std::io;
-
+use std::prelude::v1::*;
 /// Waker allows cross-thread waking of [`Poll`].
 ///
 /// When created it will cause events with [`readable`] readiness and the

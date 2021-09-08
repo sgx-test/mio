@@ -1,7 +1,7 @@
 use crate::{Interest, Registry, Token};
 
 use std::io;
-
+use std::prelude::v1::*;
 /// An event source that may be registered with [`Registry`].
 ///
 /// Types that implement `event::Source` can be registered with

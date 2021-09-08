@@ -6,7 +6,7 @@ use std::time::Duration;
 pub type Event = usize;
 
 pub type Events = Vec<Event>;
-
+use std::prelude::v1::*;
 #[derive(Debug)]
 pub struct Selector {}
 

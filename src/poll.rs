@@ -4,7 +4,7 @@ use log::trace;
 use std::os::unix::io::{AsRawFd, RawFd};
 use std::time::Duration;
 use std::{fmt, io};
-
+use std::prelude::v1::*;
 /// Polls for readiness events on all registered values.
 ///
 /// `Poll` allows a program to monitor a large number of [`event::Source`]s,
